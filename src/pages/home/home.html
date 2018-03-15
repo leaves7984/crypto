@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Safe Sleep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br />
+  <img src="../../assets/imgs/title.png" class="title" />
+  <hr />
+
+  <div class = "middleText">
+    <p> Good Morning </p>
+  </div>
+
+  <ion-slides pager autoplay="3000" loop="true" speed="2000">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+  </ion-slides>
+  <div class="middleText">
+    <p> OUR ACADEMY </p>
+    <hr />
+  </div>
+
+  <button ion-button clear (click)="scrollToTop()">
+    <ion-icon name="home"></ion-icon>
+    &nbsp;&nbsp;Home
+  </button>
+
+  <ion-list>
+    <ion-item *ngFor="let source of allSource">
+      <h2>{{source.topic}}</h2>
+      <p>{{source.description}}</p>
+      <ion-thumbnail item-end>
+        <img [src]="source.image"/>
+      </ion-thumbnail>
+      <button><i class="far fa-heart"></i></button>
+      <button (click)="shareTips(source)"><i class="fas fa-share-alt"></i></button>
+    </ion-item>
+  </ion-list>
+  <div class = "middleText">
+    <p> Resource Term </p>
+    <hr/>
+  </div>
+</ion-content>

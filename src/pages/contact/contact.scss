@@ -1,0 +1,36 @@
+page-contact {
+
+}
+.contact-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 90%;
+  min-height: 9rem;
+  max-height: 9rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
+  transition: all 0.3s ease-in;
+}
+
+.contact-tile:active {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
+  transform: translateY(4px);
+}
+
+.contact-tile span p {
+  font-size: 150%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.social-media {
+  font-size: 36px; //Preferred size here
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.store-button {
+  max-width: 75%;
+}

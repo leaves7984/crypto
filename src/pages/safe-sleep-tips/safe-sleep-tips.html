@@ -1,0 +1,25 @@
+<!--
+  Generated template for the SafeSleepTipsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Infant Sleep Tips</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <div ion-item *ngFor="let item of items">
+      <expandable [title]="item.title" [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+        {{item.content}}
+      </expandable>
+      <button ion-button class='right-top' (click)="expandItem(item)" clear item-end>View</button>
+    </div>
+  </ion-list>
+</ion-content>
